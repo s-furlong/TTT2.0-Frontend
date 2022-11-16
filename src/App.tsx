@@ -13,13 +13,9 @@ function App() {
   const [games, setGame] = useState([]);
 
   useEffect(() => {
-    let mounted = true;
     getAPIData().then((items) => {
-      if (mounted) {
         setGame(items);
-      }
     });
-    return () => (mounted = false);
   }, []);
 
   return (
