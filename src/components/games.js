@@ -1,11 +1,10 @@
 import React from "react";
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-function Game(props: { games: any[]; }) {
+function Game({ games }) {
   return (
     <div>
       <h1>These games are from the API</h1>
-      {props.games.map((game) => {
+      {games.map((game) => {
         return (
           <div key={game.id}>
             <h2>{game.title}</h2>

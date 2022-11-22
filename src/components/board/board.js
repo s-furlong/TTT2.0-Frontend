@@ -4,11 +4,11 @@ import {useState} from 'react';
 export const Board = () => {
     const gameBoard = ["_","_","_","_","_","_","_","_","_"]
 
-    const [board, setBoard] = useState<Array<string>>(gameBoard)
+    const [board, setBoard] = useState(gameBoard)
     const [playerTokenX, setPlayerTokenX] = useState(true);
     
     
-    const changeCell = (i:number) => {
+    const changeCell = (i) => {
         const updateBoard = [...board];
         if (updateBoard[i] === "_"){
             updateBoard[i] = playerTokenX ? "X" : "O";

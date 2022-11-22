@@ -1,10 +1,6 @@
-export type CellProps = {
-    id?: string
-    value: string;
-    onClick: () => void;
-}
 
-export const Cell = (props: CellProps) => {
+
+export const Cell = (props) => {
     return(
     <button id={props.id} data-testid={props.id} style={style} onClick={props.onClick} >
         { props.value }
