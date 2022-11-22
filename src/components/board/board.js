@@ -1,7 +1,7 @@
 import { Cell } from '../cell/cell';
 import {useState} from 'react';
 
-export const Board = () => {
+export const Board = ({postAPIData}) => {
     const gameBoard = ["_","_","_","_","_","_","_","_","_"]
 
     const [board, setBoard] = useState(gameBoard)
@@ -14,6 +14,7 @@ export const Board = () => {
             updateBoard[i] = playerTokenX ? "X" : "O";
             setBoard(updateBoard);
             setPlayerTokenX(!playerTokenX);
+            postAPIData(updateBoard)
         } else {
             updateBoard;
         }    
