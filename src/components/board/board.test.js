@@ -4,20 +4,23 @@ import {Board} from './board'
 
 
 describe('board', () => {
+  beforeEach(() => {
+    const postAPIData = jest.fn();
+    render(<Board postAPIData={postAPIData}/>)
+  });
+
   it('returns a blank board with nine cells', () => {
-    render(<Board />)
+    // render(<Board />)
     const cells = screen.getAllByText("_");
     expect(cells.length).toEqual(9);
   })
 
   it('begins with a blank board', async () => {
-    render(<Board />)
     const move = screen.getByTestId("game-board")
     expect(move.textContent).toBe("_________")
   });
 
   it('after first click on board produces an X', () => {
-    render(<Board />);
     const firstToClick = screen.getByTestId('cell_0')
     
     expect(firstToClick.textContent).toBe("_")
@@ -27,7 +30,6 @@ describe('board', () => {
   });
 
   it('after second click the player token swithes to O', () => {
-    render(<Board />);
     const firstToClick = screen.getByTestId('cell_0')
     const secondToClick = screen.getByTestId('cell_1')
     
@@ -39,7 +41,6 @@ describe('board', () => {
   })
 
   it('token remains the same after clicking on already occupied cell', () => {
-    render(<Board />);
     const firstToClick = screen.getByTestId('cell_0')
     const secondToClick = screen.getByTestId('cell_0')
     
