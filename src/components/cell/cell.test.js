@@ -17,5 +17,4 @@ describe('cell', () => {
 
         expect(mockOnClick).toHaveBeenCalledTimes(1);
     })
-
 });

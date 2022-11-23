@@ -12,7 +12,7 @@ function App() {
   const API_URL = "http://127.0.0.1:3000/api/v1/games";
 
   async function postAPIData(board) {
-    // try {
+    try {
       const { data } = await axios.post(
         API_URL,
         { board },
@@ -26,28 +26,22 @@ function App() {
 
       setGame(data)
 
-    // } catch (error) {
-    //   if (axios.isAxiosError(error)) {
-    //     console.log('error message: ', error.message);
-    //     return error.message;
-    //   } else {
-    //     console.log('unexpected error: ', error);
-    //     return 'An unexpected error occurred';
-    //   }
+    } catch (error) {
+      if (axios.isAxiosError(error)) {
+        console.log('error message: ', error.message);
+        return error.message;
+      } else {
+        console.log('unexpected error: ', error);
+        return 'An unexpected error occurred';
+      }
+    }
   }
-    
 
-    // useEffect(() => {
-    //   getAPIData().then((items) => {
-    //       setGame(items);
-    //   });
-    // }, []);
 
   return (
     <div className="App">
       <h1>TTT 2.0</h1>
       <Board postAPIData={postAPIData}/>
-      <div>{ games.token }</div>
     </div>
   );
 }
