@@ -1,7 +1,6 @@
 import "./App.css";
 import axios from "axios";
-import Games from "./components/games";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Board } from "./components/board/board";
 
 
