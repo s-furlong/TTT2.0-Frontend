@@ -2,6 +2,7 @@ import "./App.css";
 import axios from "axios";
 import { useState } from "react";
 import { Board } from "./components/board/board";
+import GameStatus from "./components/GameStatus/gameStatus"
 
 
 
@@ -40,7 +41,9 @@ function App() {
   return (
     <div className="App">
       <h1>TTT 2.0</h1>
-      <Board postAPIData={postAPIData}/>
+      <Board postAPIData={postAPIData} games={games}/>
+      <br/>
+      <GameStatus games={games} />
     </div>
   );
 }
