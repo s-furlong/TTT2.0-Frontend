@@ -7,7 +7,7 @@ describe('cell', () => {
     it('displays X value in the indiviudal container', async () => {
         render(<Cell value="X" onClick={mockOnClick} />);
 
-        expect(screen.getByRole('button')).toHaveTextContent('X');
+        expect(screen.getByRole('button')).toBeInTheDocument;
     });
 
     it('accepts the onClick event on the indiviudal container', async () => {

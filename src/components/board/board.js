@@ -9,7 +9,6 @@ export const Board = ({postAPIData, games}) => {
     
     
     const changeCell = (i) => {
-        console.log(games)
         if (games?.win || games?.draw) return
         const updateBoard = [...board];
         if (updateBoard[i] === " "){
