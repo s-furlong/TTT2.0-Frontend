@@ -4,10 +4,8 @@ import { useState } from "react";
 import { Board } from "./components/board/board";
 import GameStatus from "./components/GameStatus/gameStatus"
 
-
-
 function App() {
-  const [games, setGame] = useState({});
+  const [currentMove, setCurrentMove] = useState({});
 
   const API_URL = "http://127.0.0.1:3000/api/v1/games";
 
@@ -24,7 +22,7 @@ function App() {
         },
       );
 
-      setGame(data)
+      setCurrentMove(data)
 
     } catch (error) {
       if (axios.isAxiosError(error)) {
@@ -37,13 +35,12 @@ function App() {
     }
   }
 
-
   return (
     <div className="App">
       <h1>TTT 2.0</h1>
-      <Board postAPIData={postAPIData} games={games}/>
+      <Board postAPIData={postAPIData} currentMove={currentMove}/>
       <br/>
-      <GameStatus games={games} />
+      <GameStatus currentMove={currentMove} />
     </div>
   );
 }

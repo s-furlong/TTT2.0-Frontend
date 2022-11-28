@@ -1,24 +1,24 @@
-function GameStatus({ games }) {
-  const gameWon = games.win;
-  const gameTie = games.draw
+function GameStatus({ currentMove }) {
+  const gameWon = currentMove.win;
+  const gameTie = currentMove.draw
 
   return (
     <div>
-      {gameWon == true &&
+      {gameWon &&
         <h2 style={style}>
-          {games.winner} is the winner!
+          {currentMove.winner} is the winner!
         </h2>
       }
 
-      {gameTie == true &&
+      {gameTie &&
         <h2 style={style}>
           Game is a tie!
         </h2>
       }
 
-      {gameWon == false && gameTie == false &&
+      {!gameWon && !gameTie &&
         <h2 style={style}>
-          Current turn: { games.token }
+          Current turn: { currentMove.token }
         </h2>
       }
     </div>

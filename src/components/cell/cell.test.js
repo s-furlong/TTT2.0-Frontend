@@ -4,7 +4,7 @@ import {Cell} from './cell';
 
 describe('cell', () => {
     const mockOnClick = jest.fn();
-    it('displays X value in the indiviudal container', async () => {
+    it('displays a value in the indiviudal container', async () => {
         render(<Cell value="X" onClick={mockOnClick} />);
 
         expect(screen.getByRole('button')).toBeInTheDocument;
