@@ -1,5 +1,3 @@
-
-
 export const Cell = (props) => {
     return(
     <button id={props.id} data-testid={props.id} style={style} onClick={props.onClick} >
