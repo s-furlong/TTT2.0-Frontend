@@ -1,46 +1,34 @@
-# Getting Started with Create React App
+# TTT2.0 GUI
+---
+This application is a graphical user interface that allows two players to play tic tac toe with each other. This interface communicates with a rails server that incorporates the original logic from the in console application.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup
+This application was created with reactJS and requires several dependencies that need to be installed utilizing npm packages. Thes packages can be installed using the following command:
 
-## Available Scripts
 
-In the project directory, you can run:
+`npm install`
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Launch
+Once help packages and dependencies have been installed, the app can be launched through a web browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
 
-### `npm test`
+`npm start`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+If not immediately redirected, the application launches to localhost:4000 via the following link:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+> [LOCALHOST](http://localhost:4000/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+When the game is launched, simply click a tile on the Tic Tac Toe board to start a game. the first player to make a move will be X. The following player will make it their turn and will be the O token.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Testing
+Testing for this application was done utilizing the react-testing-library. The test suites can be observed at any time by running the following command in the terminal.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+`npm run test`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Each component was tested individually for functionality.
