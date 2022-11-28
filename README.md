@@ -24,7 +24,7 @@ If not immediately redirected, the application launches to localhost:4000 via th
 When the game is launched, simply click a tile on the Tic Tac Toe board to start a game. the first player to make a move will be X. The following player will make it their turn and will be the O token.
 
 
-Testing
+## Testing
 Testing for this application was done utilizing the react-testing-library. The test suites can be observed at any time by running the following command in the terminal.
 
 
